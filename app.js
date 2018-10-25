@@ -1,5 +1,4 @@
 document.getElementById("button1").addEventListener("click", loadCustomer);
-//Load Single Customer
 function loadCustomer(e) {
   const xhr = new XMLHttpRequest();
   
@@ -7,7 +6,6 @@ function loadCustomer(e) {
   
   xhr.onload = function(){
     if(this.status === 200){
-      // console.log(this.responseText);
 
       const customer = JSON.parse(this.responseText)
 
@@ -25,9 +23,6 @@ function loadCustomer(e) {
   }
   xhr.send();
 }
-
-
-//Load Customers
 
 document.getElementById("button2").addEventListener("click", loadCustomers);
 
